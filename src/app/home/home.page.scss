@@ -1,0 +1,88 @@
+.weatherApp {
+  background: #7290B9 !important;
+  height: 100%;
+  width: 100%;
+  color: white;
+}
+
+.cityBlock {
+  padding: 19px 0;
+}
+.metricSelect {
+  font-family: Lato;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 22px;
+  color: #FFFFFF;
+  mix-blend-mode: normal;
+  opacity: 0.4;
+}
+.active {
+  background: rgba(255, 255, 255, 0.2) !important;
+  opacity: 1;
+}
+
+.cityMainBlock {
+  position: absolute;
+  bottom: 0;
+}
+
+.p0 {
+  padding: 0;
+}
+
+.cityTitle {
+  font-family: Lato;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 30px;
+  line-height: 36px;
+}
+
+.cityMainBlockItem {
+  padding-bottom: 35px;
+  padding-left: 22px;
+}
+
+.cityMainBlockItemTitle {
+  font-family: Lato;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 18px;
+  color: #FFFFFF;
+  mix-blend-mode: normal;
+  opacity: 0.6;
+}
+.cityMainBlockItemValue {
+  font-family: Lato;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 22px;
+  color: #FFFFFF;
+}
+.tempValue {
+  display: flex;
+  align-items: center;
+  font-family: PT Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 40px;
+  line-height: 40px;
+  text-align: center;
+  color: #FFFFFF;
+}
+button {
+  font-family: Lato;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 18px;
+  color: #FFFFFF;
+  background: transparent;
+  mix-blend-mode: normal;
+  opacity: 0.6;
+  outline: none;
+}

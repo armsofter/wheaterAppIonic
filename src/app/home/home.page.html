@@ -1,0 +1,74 @@
+<ion-content >
+  <div class="ion-padding weatherApp">
+<!--
+   <ion-button (click)="getLocation()">мое местоположение</ion-button>
+-->
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-12 cityBlock">
+          <div class="row">
+            <div class="col-6 cityTitle">{{cityName}}</div>
+            <div class="col-6">
+              <div class="row justify-content-center">
+                <div class="btn-group" role="group" aria-label="Basic example">
+                  <button type="button" class="btn btn-secondary metricSelect" [ngClass]="metricType === 'metric' ? 'active' : ''" (click)="selectMetricType('metric')">C</button>
+                  <button type="button" class="btn btn-secondary metricSelect" [ngClass]="metricType === 'imperial' ? 'active' : ''" (click)="selectMetricType('imperial')">F</button>
+                </div>
+                <!--<div class="col-6" [ngClass]="metricType === 'metric' ? 'active' : ''" (click)="selectMetricType('metric')">C</div>-->
+                <!--<div class="col-6" [ngClass]="metricType === 'imperial' ? 'active' : ''" (click)="selectMetricType('imperial')">F</div>-->
+
+
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12">
+          <div class="row">
+            <div class="col-6 p0">
+              <button (click)="presentModal()">Сменить город</button>
+            </div>
+            <div class="col-6 p0">
+              <button (click)="getLocation()">Моё местоположение </button>
+            </div>
+          </div>
+        </div>
+        <div class="col-12" *ngIf="cityMain.temp">
+          <div class="row">
+            <div class="col-6" style="display: flex; align-items: center"><img style="width: 200px; height: 200px" src='http://openweathermap.org/img/w/{{cityMain.weather.icon}}.png'></div>
+            <div class="col-6 tempValue">{{cityMain.temp}} &deg;</div>
+            <div class="col-6 text-center" ></div>
+          </div>
+        </div>
+        <div class="col-12 cityMainBlock">
+          <div class="row">
+            <div class="col-6 cityMainBlockItem">
+              <div class="row">
+                <div class="col-12 p0 cityMainBlockItemTitle">Ветер</div>
+                <div class="col-12 p0 cityMainBlockItemValue">{{cityWind.speed}} м/c, {{windDeg}}</div>
+              </div>
+            </div>
+            <div class="col-6 cityMainBlockItem">
+              <div class="row">
+                <div class="col-12 p0 cityMainBlockItemTitle">Давление</div>
+                <div class="col-12 p0 cityMainBlockItemValue">{{cityMain.pressure}} мм рт.ст.</div>
+              </div>
+            </div>
+            <div class="col-6 cityMainBlockItem">
+              <div class="row">
+                <div class="col-12 p0 cityMainBlockItemTitle">Влажность</div>
+                <div class="col-12 p0 cityMainBlockItemValue">{{cityMain.humidity}} %</div>
+              </div>
+            </div>
+            <div class="col-6 cityMainBlockItem">
+              <div class="row">
+                <div class="col-12 p0 cityMainBlockItemTitle">Вероятность дождя</div>
+                <div class="col-12 p0 cityMainBlockItemValue">Н/Д</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</ion-content>

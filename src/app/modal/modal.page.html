@@ -1,0 +1,22 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-title>Выбрать город</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12 text-center" style="padding-top: 20px">
+                <input type="text" minlength="3" placeholder="Введите название города" autofocus="true" style="border: 1px solid;border-radius: 5px;" [(ngModel)]="searchCity" (ngModelChange)="search(searchCity)">
+            </div>
+            <div class="col-12">
+                <div *ngFor="let city of searchResults">
+                    <div (click)="selectCity(city.id)">
+                        {{city.name}} {{city.sys.country}}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</ion-content>
